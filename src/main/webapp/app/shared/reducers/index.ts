@@ -11,6 +11,34 @@ import activate, { ActivateState } from 'app/modules/account/activate/activate.r
 import password, { PasswordState } from 'app/modules/account/password/password.reducer';
 import settings, { SettingsState } from 'app/modules/account/settings/settings.reducer';
 import passwordReset, { PasswordResetState } from 'app/modules/account/password-reset/password-reset.reducer';
+// prettier-ignore
+import hoteldetails, {
+  HoteldetailsMySuffixState
+} from 'app/entities/hoteldetails-my-suffix/hoteldetails-my-suffix.reducer';
+// prettier-ignore
+import customer, {
+  CustomerMySuffixState
+} from 'app/entities/customer-my-suffix/customer-my-suffix.reducer';
+// prettier-ignore
+import tripmaster, {
+  TripmasterMySuffixState
+} from 'app/entities/tripmaster-my-suffix/tripmaster-my-suffix.reducer';
+// prettier-ignore
+import flightdetails, {
+  FlightdetailsMySuffixState
+} from 'app/entities/flightdetails-my-suffix/flightdetails-my-suffix.reducer';
+// prettier-ignore
+import itinerary, {
+  ItineraryMySuffixState
+} from 'app/entities/itinerary-my-suffix/itinerary-my-suffix.reducer';
+// prettier-ignore
+import termsConditions, {
+  TermsConditionsMySuffixState
+} from 'app/entities/terms-conditions-my-suffix/terms-conditions-my-suffix.reducer';
+// prettier-ignore
+import cancellationPolicy, {
+  CancellationPolicyMySuffixState
+} from 'app/entities/cancellation-policy-my-suffix/cancellation-policy-my-suffix.reducer';
 /* jhipster-needle-add-reducer-import - JHipster will add reducer here */
 
 export interface IRootState {
@@ -23,6 +51,13 @@ export interface IRootState {
   readonly passwordReset: PasswordResetState;
   readonly password: PasswordState;
   readonly settings: SettingsState;
+  readonly hoteldetails: HoteldetailsMySuffixState;
+  readonly customer: CustomerMySuffixState;
+  readonly tripmaster: TripmasterMySuffixState;
+  readonly flightdetails: FlightdetailsMySuffixState;
+  readonly itinerary: ItineraryMySuffixState;
+  readonly termsConditions: TermsConditionsMySuffixState;
+  readonly cancellationPolicy: CancellationPolicyMySuffixState;
   /* jhipster-needle-add-reducer-type - JHipster will add reducer type here */
   readonly loadingBar: any;
 }
@@ -37,6 +72,13 @@ const rootReducer = combineReducers<IRootState>({
   passwordReset,
   password,
   settings,
+  hoteldetails,
+  customer,
+  tripmaster,
+  flightdetails,
+  itinerary,
+  termsConditions,
+  cancellationPolicy,
   /* jhipster-needle-add-reducer-combine - JHipster will add reducer here */
   loadingBar
 });

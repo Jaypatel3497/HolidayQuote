@@ -1,0 +1,61 @@
+{
+    "fields": [
+        {
+            "fieldName": "departure",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "arrival",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "flightNumber",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "airlineName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "departureTime",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "arrivalTime",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "FlightType",
+            "fieldValues": "OUTBOUND,INBOUND"
+        },
+        {
+            "fieldName": "flightclass",
+            "fieldType": "FlightClass",
+            "fieldValues": "ECONOMY,BUSINESS,FIRST"
+        },
+        {
+            "fieldName": "price",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "tripmaster",
+            "otherEntityName": "tripmaster",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "flightdetails"
+        }
+    ],
+    "changelogDate": "20180606072448",
+    "entityTableName": "flightdetails",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "angularJSSuffix": "mySuffix"
+}

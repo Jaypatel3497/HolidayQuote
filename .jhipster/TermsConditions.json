@@ -1,0 +1,27 @@
+{
+    "fields": [
+        {
+            "fieldName": "descritption",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "tripmaster",
+            "otherEntityName": "tripmaster",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "termsconditions"
+        }
+    ],
+    "changelogDate": "20180606072450",
+    "entityTableName": "terms_conditions",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "angularJSSuffix": "mySuffix"
+}

@@ -1,0 +1,90 @@
+entity Hoteldetails {
+	hotelName String,
+    hotelTpId String,
+    category HotelCategory,
+    star HotelStar,
+    city String,
+    location String
+}
+
+entity Customer {
+	name String,
+    email String,
+    contactNumber String,
+    city String
+}
+
+// an ignored comment
+/** not an ignored comment */
+entity Tripmaster {
+	emailtitle String,
+    noOfNights Integer,
+    from String,
+    cities String
+}
+
+entity Flightdetails {
+	departure String,
+    arrival String,
+    flightNumber String,
+    airlineName String,
+    departureTime String,
+    arrivalTime String,
+    type FlightType,
+    flightclass FlightClass,
+    price String
+}
+
+/**
+ * Task entity.
+ * @author The JHipster team.
+ */
+entity Itinerary {
+   title String,
+   description String,
+   city String
+}
+
+entity TermsConditions{
+ descritption String
+}
+entity CancellationPolicy{
+   descritption String
+}
+
+enum HotelStar {
+ TWO, THREE, FOUR, FIVE, UNKNOWN
+}
+enum HotelCategory {
+    STANDARD, DELUX, LUXURY
+    }
+enum FlightType {
+    OUTBOUND, INBOUND
+    }
+enum FlightClass {
+    ECONOMY, BUSINESS, FIRST
+    }
+
+relationship ManyToOne {
+	Tripmaster{customer} to Customer
+}
+relationship ManyToMany {
+	Tripmaster{flightdetails} to Flightdetails{tripmaster}
+	Tripmaster{hoteldetails} to Hoteldetails{tripmaster}
+	Tripmaster{termsconditions} to TermsConditions{tripmaster}
+	Tripmaster{cancellationPolicy} to CancellationPolicy{tripmaster}
+	Tripmaster{itinerary} to Itinerary{tripmaster}
+}
+
+
+
+
+
+// Use Data Transfert Objects (DTO)
+ dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl 
+
+// Set an angular suffix
+ angularSuffix * with mySuffix

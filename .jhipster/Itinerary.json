@@ -1,0 +1,36 @@
+{
+    "fields": [
+        {
+            "fieldName": "title",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "city",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "tripmaster",
+            "otherEntityName": "tripmaster",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "itinerary"
+        }
+    ],
+    "changelogDate": "20180606072449",
+    "javadoc": "Task entity.\n@author The JHipster team.",
+    "entityTableName": "itinerary",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "angularJSSuffix": "mySuffix"
+}

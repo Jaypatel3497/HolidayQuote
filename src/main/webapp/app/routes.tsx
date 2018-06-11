@@ -13,6 +13,13 @@ import Admin from 'app/modules/administration';
 import Entities from 'app/entities';
 import PrivateRoute from 'app/shared/auth/private-route';
 import { AUTHORITIES } from 'app/config/constants';
+import PassangerDetails from 'app/modules/flightquote/PassangerDetails';
+import BasicDetails from 'app/modules/flightquote/BasicDetails';
+import FlightsDetails from 'app/modules/flightquote/FlightsDetails';
+import HotelPage from 'app/modules/flightquote/HotelPage';
+import Itinerary from 'app/modules/flightquote/Itinerary';
+import { TermsAndConditions } from 'app/modules/flightquote/TermsAndConditions';
+import { CancellationPolicy } from 'app/modules/flightquote/CancellationPolicy';
 
 const Routes = () => (
   <div className="view-routes">
@@ -23,6 +30,13 @@ const Routes = () => (
       <Route path="/activate/:key?" component={Activate} />
       <Route path="/reset/request" component={PasswordResetInit} />
       <Route path="/reset/finish/:key?" component={PasswordResetFinish} />
+      <PrivateRoute path="/passanger-details" component={PassangerDetails} hasAnyAuthorities={[AUTHORITIES.ADMIN, AUTHORITIES.USER]} />
+      <PrivateRoute path="/basic-details" component={BasicDetails} hasAnyAuthorities={[AUTHORITIES.ADMIN, AUTHORITIES.USER]} />
+      <PrivateRoute path="/termsconditions" component={TermsAndConditions} hasAnyAuthorities={[AUTHORITIES.ADMIN, AUTHORITIES.USER]} />
+      <PrivateRoute path="/hotelpage" component={HotelPage} hasAnyAuthorities={[AUTHORITIES.ADMIN, AUTHORITIES.USER]} />
+      <PrivateRoute path="/itinerary" component={Itinerary} hasAnyAuthorities={[AUTHORITIES.ADMIN, AUTHORITIES.USER]} />
+      <PrivateRoute path="/flights-details" component={FlightsDetails} hasAnyAuthorities={[AUTHORITIES.ADMIN, AUTHORITIES.USER]} />
+      <PrivateRoute path="/cancellation-policy" component={CancellationPolicy} hasAnyAuthorities={[AUTHORITIES.ADMIN, AUTHORITIES.USER]} />
       <PrivateRoute path="/admin" component={Admin} hasAnyAuthorities={[AUTHORITIES.ADMIN]} />
       <PrivateRoute path="/account" component={Account} hasAnyAuthorities={[AUTHORITIES.ADMIN, AUTHORITIES.USER]} />
       <PrivateRoute path="/entity" component={Entities} hasAnyAuthorities={[AUTHORITIES.USER]} />

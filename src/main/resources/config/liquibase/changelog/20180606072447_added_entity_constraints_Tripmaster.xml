@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Tripmaster.
+    -->
+    <changeSet id="20180606072447-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="customer_id"
+                                 baseTableName="tripmaster"
+                                 constraintName="fk_tripmaster_customer_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="customer"/>
+
+        <addForeignKeyConstraint baseColumnNames="tripmasters_id"
+                                 baseTableName="tripmaster_flightdetails"
+                                 constraintName="fk_tripmaster_flightdetails_tripmasters_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tripmaster"/>
+        <addForeignKeyConstraint baseColumnNames="flightdetails_id"
+                                 baseTableName="tripmaster_flightdetails"
+                                 constraintName="fk_tripmaster_flightdetails_flightdetails_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="flightdetails"/>
+        
+        <addForeignKeyConstraint baseColumnNames="tripmasters_id"
+                                 baseTableName="tripmaster_hoteldetails"
+                                 constraintName="fk_tripmaster_hoteldetails_tripmasters_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tripmaster"/>
+        <addForeignKeyConstraint baseColumnNames="hoteldetails_id"
+                                 baseTableName="tripmaster_hoteldetails"
+                                 constraintName="fk_tripmaster_hoteldetails_hoteldetails_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="hoteldetails"/>
+        
+        <addForeignKeyConstraint baseColumnNames="tripmasters_id"
+                                 baseTableName="tripmaster_termsconditions"
+                                 constraintName="fk_tripmaster_termsconditions_tripmasters_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tripmaster"/>
+        <addForeignKeyConstraint baseColumnNames="termsconditions_id"
+                                 baseTableName="tripmaster_termsconditions"
+                                 constraintName="fk_tripmaster_termsconditions_termsconditions_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="terms_conditions"/>
+        
+        <addForeignKeyConstraint baseColumnNames="tripmasters_id"
+                                 baseTableName="tripmaster_cancellation_policy"
+                                 constraintName="fk_tripmaster_cancellation_policy_tripmasters_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tripmaster"/>
+        <addForeignKeyConstraint baseColumnNames="cancellation_policies_id"
+                                 baseTableName="tripmaster_cancellation_policy"
+                                 constraintName="fk_tripmaster_cancellation_policy_cancellation_policies_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="cancellation_policy"/>
+        
+        <addForeignKeyConstraint baseColumnNames="tripmasters_id"
+                                 baseTableName="tripmaster_itinerary"
+                                 constraintName="fk_tripmaster_itinerary_tripmasters_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tripmaster"/>
+        <addForeignKeyConstraint baseColumnNames="itineraries_id"
+                                 baseTableName="tripmaster_itinerary"
+                                 constraintName="fk_tripmaster_itinerary_itineraries_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="itinerary"/>
+        
+    </changeSet>
+</databaseChangeLog>

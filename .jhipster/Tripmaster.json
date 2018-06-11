@@ -1,0 +1,79 @@
+{
+    "fields": [
+        {
+            "fieldName": "emailtitle",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "noOfNights",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "from",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cities",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "customer",
+            "otherEntityName": "customer",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "tripmaster",
+            "relationshipName": "flightdetails",
+            "otherEntityName": "flightdetails",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "tripmaster",
+            "relationshipName": "hoteldetails",
+            "otherEntityName": "hoteldetails",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "tripmaster",
+            "relationshipName": "termsconditions",
+            "otherEntityName": "termsConditions",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "tripmaster",
+            "relationshipName": "cancellationPolicy",
+            "otherEntityName": "cancellationPolicy",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "tripmaster",
+            "relationshipName": "itinerary",
+            "otherEntityName": "itinerary",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20180606072447",
+    "javadoc": "not an ignored comment",
+    "entityTableName": "tripmaster",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "angularJSSuffix": "mySuffix"
+}

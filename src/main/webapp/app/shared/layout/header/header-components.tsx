@@ -40,3 +40,12 @@ export const Home = props => (
     </NavLink>
   </NavItem>
 );
+
+export const FlightQuotes = props => (
+  <NavItem>
+    <NavLink tag={Link} to="/passanger-details" className="d-flex align-items-center">
+      <FontAwesomeIcon icon="fighter-jet" />
+      <span>FlightQuotes</span>
+    </NavLink>
+  </NavItem>
+);

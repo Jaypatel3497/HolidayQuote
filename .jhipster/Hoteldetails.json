@@ -1,0 +1,49 @@
+{
+    "fields": [
+        {
+            "fieldName": "hotelName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "hotelTpId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "category",
+            "fieldType": "HotelCategory",
+            "fieldValues": "STANDARD,DELUX,LUXURY"
+        },
+        {
+            "fieldName": "star",
+            "fieldType": "HotelStar",
+            "fieldValues": "TWO,THREE,FOUR,FIVE,UNKNOWN"
+        },
+        {
+            "fieldName": "city",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "location",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "tripmaster",
+            "otherEntityName": "tripmaster",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "hoteldetails"
+        }
+    ],
+    "changelogDate": "20180606072445",
+    "entityTableName": "hoteldetails",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "angularJSSuffix": "mySuffix"
+}

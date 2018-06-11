@@ -1,0 +1,27 @@
+{
+    "fields": [
+        {
+            "fieldName": "descritption",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "tripmaster",
+            "otherEntityName": "tripmaster",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "cancellationPolicy"
+        }
+    ],
+    "changelogDate": "20180606072451",
+    "entityTableName": "cancellation_policy",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "angularJSSuffix": "mySuffix"
+}

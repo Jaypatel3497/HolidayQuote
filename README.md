@@ -1,4 +1,5 @@
-# app4
+# Flightqoute
+
 This application was generated using JHipster 5.0.0-beta.1, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v5.0.0-beta.1](https://www.jhipster.tech/documentation-archive/v5.0.0-beta.1).
 
 ## Development
